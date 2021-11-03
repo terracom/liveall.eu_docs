@@ -52,7 +52,7 @@ Successful Response
 -------------------
 
 In case of success, for a single destination number, we get:
-  `OK ID:123456789`
+  ``OK ID:123456789``
 
 (ID: is the submitted SMS id number) and in case of multiple destinations we get something like the below:
   ``OK ID:123456787|OK ID:123456788|OK ID:123456789``
