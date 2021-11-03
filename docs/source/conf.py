@@ -6,8 +6,8 @@ project = 'Liveall.eu Docs'
 copyright = '2021, Liveall.eu'
 author = 'Mike Nakos'
 
-release = '1.2'
-version = '1.2.0'
+release = '3.3'
+version = '3.3.5'
 
 # -- General configuration
 
