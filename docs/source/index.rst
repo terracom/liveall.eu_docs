@@ -7,4 +7,4 @@ Contents
 
 .. toctree::
 
-   http_api
+   httpapi/index
