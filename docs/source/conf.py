@@ -4,7 +4,7 @@
 
 project = 'Liveall.eu Docs'
 copyright = '2021, Liveall.eu'
-author = 'Terracom'
+author = 'Mike Nakos'
 
 release = '1.2'
 version = '1.2.0'
@@ -18,6 +18,13 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
 ]
+
+# The master toctree document.
+master_doc = 'index'
+
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+html_title = 'Liveall.eu Docs'
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
