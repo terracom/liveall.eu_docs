@@ -4,15 +4,15 @@ FORM API (x-www-form-urlencoded API)
 .. figure:: ../../static/httpapi.png
    :alt: httpapi-logo
 
-This type of API is based on the form x-www-form-urlencoded type of web-requests as described here:
-.. _POST HTTP - MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST/
+This type of API is based on the form x-www-form-urlencoded type of web-requests (**POST**) as described here: `POST HTTP - MDN Web Docs`_
+
 The ``Content-Type`` on the request headers is set to ``application/x-www-form-urlencoded``
 
 .. note::
    If you like to send multiple SMS with one request you are advised to use the **application/json** API, which offers more flexibility.
 
 .. toctree::
-   :caption: Options
+   :caption: Actions
    :maxdepth: 1
 
    smssendout
@@ -20,3 +20,7 @@ The ``Content-Type`` on the request headers is set to ``application/x-www-form-u
    checkaccountbalance
    operationresultcodes
    getmessagelogforadate
+
+
+
+.. _`POST HTTP - MDN Web Docs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST/
