@@ -9,7 +9,10 @@ Endpoint URL
 ------------
 
 The end-point for sending SMS via HTTP (**POST**) calls is the following:
-  ``https://sms.liveall.eu/apiext/Sendout/GetSMSStatus``
+
+.. code:: flatline
+
+  https://sms.liveall.eu/apiext/Sendout/GetSMSStatus
 
 Variables
 ---------

@@ -9,7 +9,12 @@ SMS sendout
 Endpoint URL
 ------------
 The end-point for sending SMS via HTTP (**POST**) calls is the following:
-  ``https://sms.liveall.eu/apiext/Sendout/SendSMS``
+
+.. code:: flatline
+
+  https://sms.liveall.eu/apiext/Sendout/SendSMS
+
+  
 
 Variables
 ---------
@@ -18,19 +23,19 @@ apitoken
   a unique hash code for each account that authorizes each web request. That code you can find it on `your account’s page`_
 
 destination
-  the cell’s number (without leading zeros or leading + sign), for example for Greece: 306912345678. In case you need to send the same message to more than one recipients, then you may supply that variable with these numbers delimited by one of the following characters ``;.^`` It is recommended to send batches with a single request instead of making multiple requests, in case you want to send the same text to multiple destinations
+  the cell’s number (without leading zeros or + sign), for example for Greece: 306912345678. In case you need to send the same message to more than one recipients, then you may supply that variable with these numbers delimited by one of the following characters ``;.^`` It is recommended to send batches with a single request instead of making multiple requests, in case you want to send the same text to multiple destinations
 
 senderid
-  the sender name of the SMS. The maximum number of characters is 11
+  the sender name of the SMS. There is a limit to 11 characters (latin characters). Allowed characters are: ``[A-Za-z0-9\-\.\!\#\%\&\(\)\<\>]``
 
 message
   the SMS text
 
 *sendon (optional)*
-  an optional scheduling parameter. You can define the future datetime of the send-out of the message. This variable is a type of unsigned integer - unix timestamp. You can find more reference on https://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_unix-timestamp That is, in case you want to send the message on 2016-07-06 12:17:45 you must provide the value 1467796665
+  an optional scheduling parameter. You can define a future datetime a message to be sent. This variable is a type of unsigned integer - unix timestamp. You can find more reference on https://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_unix-timestamp That is, in case you want to send the message on 2016-07-06 12:17:45 you must provide the value 1467796665
 
 *pricecat (optional)*
-  by setting that parameter you can choose between normal and low cost price category. Set 1 in case you want to send the message with low cost, or ignore it or set the value to 0, in case you want to send with normal cost
+  by setting that parameter you can choose between normal and low cost price category (where applicable). Set 1 in case you want to send the message with low cost, or ignore it or set the value to 0, in case you want to send with normal cost
 
 
 If you want to test the API we recommend to use the Postman_.

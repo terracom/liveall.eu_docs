@@ -12,4 +12,5 @@ Likewise, the response is not a delimited string but a JSON object
    :maxdepth: 1
 
    sendjsms
+   sendjsms_with_form
    
