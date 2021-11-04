@@ -1,9 +1,4 @@
-Template for the Read the Docs tutorial
-=======================================
+Liveall.eu Docs
+===============
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+File are contain the docs for Liveall.eu as published on https://livealleu-docs.readthedocs.io/

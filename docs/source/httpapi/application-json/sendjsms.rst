@@ -1,6 +1,9 @@
 Send SMS
 ========
 
+.. figure:: ../../static/Sms-icon-small.png
+   :alt: sms-icon-small
+
 Description
 -----------
 

@@ -1,5 +1,8 @@
-Simple API (x-www-form-urlencoded API)
+FORM API (x-www-form-urlencoded API)
 ======================================
+
+.. figure:: ../../static/httpapi.png
+   :alt: httpapi-logo
 
 This type of API is based on the form x-www-form-urlencoded type of web-requests as described here:
 .. _POST HTTP - MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST/
