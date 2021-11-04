@@ -179,5 +179,9 @@ This URL will be shortened by our **internal shortener system** - will shorten t
 As you can see in the :ref:`JSON object example`, there is a token: ``{SOMEID_VAL_TOKEN}`` which that will be replaced by the
 ``SOMEID_VAL_TOKEN`` value of the ``value_tokens`` key/value object and have a different value for each destination.
 
+Responses and response properties
+---------------------------------
+The same applies as on the :doc:`sendjsms` reference
+
 
 .. _`your account’s page`: https://www.liveall.eu/user
