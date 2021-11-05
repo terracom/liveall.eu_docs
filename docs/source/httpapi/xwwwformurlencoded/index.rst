@@ -4,7 +4,7 @@ FORM API (x-www-form-urlencoded API)
 .. figure:: ../../static/httpapi.png
    :alt: httpapi-logo
 
-This type of API is based on the form x-www-form-urlencoded type of web-requests (**POST**) as described here: `POST HTTP - MDN Web Docs`_
+This type of `Liveall.eu`_ API is based on the form x-www-form-urlencoded type of web-requests (**POST**) as described here: `POST HTTP - MDN Web Docs`_
 
 The ``Content-Type`` on the request headers is set to ``application/x-www-form-urlencoded``
 
@@ -24,3 +24,4 @@ The ``Content-Type`` on the request headers is set to ``application/x-www-form-u
 
 
 .. _`POST HTTP - MDN Web Docs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST/
+.. _`Liveall.eu`: https://www.liveall.eu

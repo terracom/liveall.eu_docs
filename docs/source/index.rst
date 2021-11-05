@@ -1,6 +1,6 @@
 Welcome to the Liveall.eu docs
 ==============================
-Here you can find all the reference docs about APIs and more
+You can find here all the reference docs about APIs and more, regarding `Liveall.eu`_
 
 .. toctree::
    :maxdepth: 2
@@ -9,3 +9,6 @@ Here you can find all the reference docs about APIs and more
    httpapi/xwwwformurlencoded/index
    httpapi/application-json/index
    httpapi/oldapi/index
+
+
+.. _`Liveall.eu`: https://www.liveall.eu

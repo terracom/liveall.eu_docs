@@ -7,6 +7,7 @@ Old API (obsolete)
 .. contents:: Contents
   :local:
   :backlinks: none
+  :depth: 1
 
 
 1. Send SMS
@@ -16,7 +17,7 @@ Old API (obsolete)
 ^^^^^^^^^^^^^^^
 
 We maintain the old http api for backwards compatibility (there are no improvements on this api),
-because Liveall.eu has an ecosystem of 3rd party applications-sites that may not switched to our new API yet.
+because `Liveall.eu`_ has an ecosystem of 3rd party applications-sites that may not switched to our new API yet.
 
 .. note:: All newcomers to the service cannot use that API. They **must** use newer versions of API
 
@@ -311,3 +312,4 @@ BalanceInEuro        is the request’s error code as shown below
 RemainingSMSCount    is the error message, describing the problem with the request
 =================    ==============
 
+.. _`Liveall.eu`: https://www.liveall.eu
