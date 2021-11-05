@@ -9,10 +9,10 @@ This type of `Liveall.eu`_ API is based on the form x-www-form-urlencoded type o
 The ``Content-Type`` on the request headers is set to ``application/x-www-form-urlencoded``
 
 .. note::
-   If you like to send multiple SMS with one request you are advised to use the **application/json** API, which offers more flexibility.
+   If you like to send multiple SMS with one request you are advised to use the :doc:`../application-json/index`, which offers more flexibility.
 
 .. toctree::
-   :caption: Actions
+   :caption: Below are the available actions for this type of API
    :maxdepth: 1
 
    smssendout

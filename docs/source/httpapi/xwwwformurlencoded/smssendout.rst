@@ -1,5 +1,5 @@
-SMS sendout
-===========
+Send SMS
+========
 
 .. figure:: ../../static/Sms-icon-small.png
    :alt: sms-icon-small
@@ -37,7 +37,7 @@ Variables
 :guilabel:`apitoken`
   ``string`` a unique hash code for each account that authorizes each web request. That code you can find it on `your account’s page`_
 
-:guilabel:`destination``
+:guilabel:`destination`
   ``string`` the cell’s number (without leading zeros or + sign), for example for Greece: 306912345678.
   In case you need to send the same message **to more than one recipients**,
   then you may supply that variable with these numbers delimited by one of the following characters ``;.^``

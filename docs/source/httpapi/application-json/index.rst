@@ -11,7 +11,7 @@ The ``Content-Type`` on the request headers is set to ``application/json`` and a
 Likewise, the response is not a delimited string but a JSON object
 
 .. toctree::
-   :caption: Actions
+   :caption: Below are the available actions for this type of API
    :maxdepth: 1
 
    sendjsms
