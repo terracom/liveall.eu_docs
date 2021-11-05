@@ -4,6 +4,10 @@ Send SMS
 .. figure:: ../../static/Sms-icon-small.png
    :alt: sms-icon-small
 
+.. contents:: Contents
+  :local:
+  :backlinks: none
+
 Description
 -----------
 

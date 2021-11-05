@@ -1,8 +1,12 @@
-Send SMS with a form
-====================
+Send SMS with a form link
+=========================
 
 .. figure:: ../../static/Sms-icon-small.png
    :alt: sms-icon-small
+
+.. contents:: Contents
+  :local:
+  :backlinks: none
 
 Description
 -----------

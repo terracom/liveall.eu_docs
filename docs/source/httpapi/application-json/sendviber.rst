@@ -4,6 +4,9 @@ Send Viber messages
 .. figure:: ../../static/logo-viber_small1.png
    :alt: viber-icon-small
 
+.. contents:: Contents
+  :local:
+  :backlinks: none
 
 Description
 -----------

@@ -14,6 +14,18 @@ The end-point for sending SMS via HTTP (**POST**) calls is the following:
 
   https://sms.liveall.eu/apiext/Sendout/GetAccountBalance
 
+
+curl example
+------------
+
+.. code:: flatline
+
+  curl --location --request POST 'https://sms.liveall.eu/apiext/Sendout/GetAccountBalance' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode 'apitoken=7ace3e49cae13ae4f5ccb8a6a8a0d6a8fe120aa82ae46ad6ee4c9d8' \
+    --data-urlencode 'countryprefix=30'
+
+
 Variables
 ---------
 

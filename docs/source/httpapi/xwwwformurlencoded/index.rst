@@ -18,8 +18,8 @@ The ``Content-Type`` on the request headers is set to ``application/x-www-form-u
    smssendout
    checksmsstatus
    checkaccountbalance
-   operationresultcodes
    getmessagelogforadate
+   operationresultcodes
 
 
 
