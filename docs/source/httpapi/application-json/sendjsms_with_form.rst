@@ -186,9 +186,74 @@ This URL will be shortened by our **internal shortener system** - will shorten t
 As you can see in the :ref:`JSON object example`, there is a token: ``{SOMEID_VAL_TOKEN}`` which that will be replaced by the
 ``SOMEID_VAL_TOKEN`` value of the ``value_tokens`` key/value object and have a different value for each destination.
 
-Responses and response properties
----------------------------------
-The same applies as on the :doc:`sendjsms` reference
+
+Error Response
+--------------
+
+In case of error, we get something like the below:
+
+.. code-block:: json
+
+    {
+        "success": false,
+        "OperationErrors": [
+            {
+                "errorCode": 13,
+                "errorMessage": "Invalid destination number",
+                "SMSErrorType": 3,
+                "valueOfError": "3069"
+            }
+        ],
+        "SubmissionID": 0,
+        "data": null
+    }
+
+**[success]** will be false and you'll find the object **[OperationErrors]** with error details
+
+Successful Response
+-------------------
+
+.. code-block:: json
+
+    {
+        "success": true,
+        "OperationErrors": null,
+        "SubmissionID": 0,
+        "data": [
+            {
+                "destination": "306912345678",
+                "smsid": 20818588
+            },
+            {
+                "destination": "306912345677",
+                "smsid": 20818589
+            },
+            {
+                "destination": "306912345676",
+                "smsid": 20818590
+            }
+        ]
+    }
+
+**[success]** is true and the **[data]** property contains the **[smsid]** for each SMS
+
+Response properties
+-------------------
+
+===============     ===========
+Name                Description
+===============     ===========
+success             when false, then no message sent and the whole request is considered failed
+OperationErrors     | when success is false, we get an array of objects with errors.
+                    | Each object has 3 properties:
+                    | **errorCode**: the error code (integer) of the error,
+                    | **errorMessage**: the descriptive text of the error and
+                    | **valueOfError**: the value that caused the error (for debugging purposes)
+data                | in case of success, web-service is returning an array ob objects - 
+                    | one for each destination, having 2 properties:
+                    | **destination**: the cell’s number and
+                    | **smsid**: the unique id of the SMS
+===============     ===========
 
 
 .. _`your account’s page`: https://www.liveall.eu/user
