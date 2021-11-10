@@ -264,8 +264,6 @@ In case of success this object is null
             }
 
 
-
-
 .. _`your account’s page`: https://www.liveall.eu/user
 
 
