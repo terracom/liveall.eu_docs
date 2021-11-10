@@ -1,5 +1,6 @@
 Welcome to the Liveall.eu docs
 ==============================
+
 You can find here all the reference docs about APIs and more, regarding `Liveall.eu`_
 
 .. toctree::

@@ -6,8 +6,8 @@ project = 'Liveall.eu Docs'
 copyright = '2021, Liveall.eu'
 author = 'Mike Nakos'
 
-release = '3'
-version = 'v3'
+release = '4'
+version = 'v4'
 
 # -- General configuration
 
@@ -18,7 +18,10 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosectionlabel',
+    'sphinx_tabs.tabs',
 ]
+
+sphinx_tabs_valid_builders = ['linkcheck']
 
 # The master toctree document.
 master_doc = 'index'
