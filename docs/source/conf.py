@@ -6,10 +6,12 @@ project = 'Liveall.eu Docs'
 copyright = '2021, Liveall.eu'
 author = 'Mike Nakos'
 
-release = '5'
-version = 'v5'
+release = '6'
+version = 'v6'
 
 # -- General configuration
+
+# autodoc_mock_imports = ['_tkinter']
 
 extensions = [
     'sphinx.ext.duration',
