@@ -21,6 +21,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosectionlabel',
     'sphinx_tabs.tabs',
+    'hoverxref.extension',
 ]
 
 sphinx_tabs_valid_builders = ['linkcheck']
