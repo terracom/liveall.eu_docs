@@ -337,6 +337,19 @@ Models.OP_RESULT
    }
 
 
+
+Models.SubmissionInfo
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: csharp
+
+   public class SubmissionInfo
+   {
+      public string destination { get; set; }
+      public uint smsid { get; set; }
+   }
+
+
 Models.OP_RESULT_SMSLOG
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -350,6 +363,25 @@ Models.OP_RESULT_SMSLOG
       }
 
       public Models.SMSLogRow[] SMSLogRows { get; set; }
+   }
+
+Models.SMSLogRow
+~~~~~~~~~~~~~~~~
+
+.. code:: csharp
+
+   public class SMSLogRow
+   {
+      public uint SMS_ID { get; set; }
+      public uint BatchID { get; set; }
+      public string Sender_ID { get; set; }
+      public string Destination { get; set; }
+      public uint LastStatusUnixDatetime { get; set; }
+      public DateTime LastStatusDatetime { get; set; }
+      public string StatusStr { get; set; }
+      public int SMS_Qty { get; set; }
+      public double MessageCharge { get; set; }
+      public string InstantMessageStatusStr { get; set; }
    }
 
 
@@ -368,6 +400,23 @@ Models.OP_RESULT_SMSSTAT
       public SmsStatusInfo[] StatusInfo { get; set; }
    }
 
+Models.SmsStatusInfo
+~~~~~~~~~~~~~~~~~~~~
+
+.. code:: csharp
+
+   public class SmsStatusInfo
+   {
+      public uint sms_id { get; set; }
+      public DateTime submitted_on { get; set; }
+      public DateTime last_status_time { get; set; }
+      public string recipient { get; set; }
+      public DLR_CODES status_code { get; set; }
+      public string status_txt { get; set; }
+      public int sms_qty { get; set; }
+      public double charge_amount { get; set; }
+   }
+
 
 Models.OP_RESULT_ACCOUNT_INFO
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -382,6 +431,19 @@ Models.OP_RESULT_ACCOUNT_INFO
       }
 
       public AccountBalanceInfo AccountBalance { get; set; }
+   }
+
+
+Models.AccountBalanceInfo
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: csharp
+
+   public class AccountBalanceInfo
+   {
+      public double Balance { get; set; }
+      public int SmsRemainCount { get; set; }
+      public int LCSmsRemainCount { get; set; }
    }
 
 
