@@ -67,7 +67,7 @@ This is the async version of the SMS sendout method. Below are the parameters an
 **Parameters**
 
 :guilabel:`messages`
-   ``Array`` of `Models.HttpApiJSMSParts`_ that contains every destination/message pair to be sent
+   ``Array`` of :hoverxref:`Models.HttpApiJSMSParts` that contains every destination/message pair to be sent
 
 :guilabel:`price_category`
    ``(optional) - int`` it is the price category to use. Default value: 0. 1 for low-cost where applicable
@@ -77,7 +77,7 @@ This is the async version of the SMS sendout method. Below are the parameters an
 
 **Return value**
 
-Data type: `Models.OP_RESULT`_
+Data type: :hoverxref:`Models.OP_RESULT`
 
 ---------------------------------------------------------
 
@@ -262,10 +262,7 @@ Connector.GetAccountBalanceAsync()
 
 **Return value**
 
-Data type: :hoverxref:`OP_RESULT_ACCOUNT_INFO <index:Models.OP_RESULT_ACCOUNT_INFO>`
-
-
-Data type2: :hoverxref:`OP_RESULT_ACCOUNT_INFO <Models.OP_RESULT_ACCOUNT_INFO>`
+Data type: :hoverxref:`OP_RESULT_ACCOUNT_INFO <Models.OP_RESULT_ACCOUNT_INFO>`
 
 ---------------------------------------------------------
 
