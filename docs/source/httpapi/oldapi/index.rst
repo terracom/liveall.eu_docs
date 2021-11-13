@@ -9,6 +9,7 @@ Old API (obsolete)
   :backlinks: none
   :depth: 1
 
+------------------------------------------------
 
 1. Send SMS
 -----------
@@ -135,6 +136,8 @@ where ``SMS_HTTP_request_ID`` is the SMS id of your SMS web-request
    ``OK ID:1234`` when sending to a single cell number, or ``OK ID:1234|OK ID:1235|OK ID:1236`` when sending to more than one destination.
 
 
+------------------------------------------------
+
 2. Check the status of SMS
 --------------------------
 
@@ -242,6 +245,7 @@ Charge amount [float]         the charged amount
    16384: HLR Sent
    32768: HLR Completed
 
+------------------------------------------------
 
 3. Check the current balance of messaging account
 -------------------------------------------------

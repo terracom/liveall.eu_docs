@@ -8,6 +8,8 @@ Send SMS
   :local:
   :backlinks: none
 
+------------------------------------------------
+
 Description
 -----------
 
@@ -16,6 +18,8 @@ Also you are dealing with a JSON object (as a payload), which is much more strai
 
 .. note:: you can send a different text to each destination as you may have noticed below
 
+------------------------------------------------
+
 Endpoint URL
 ------------
 
@@ -23,6 +27,7 @@ Endpoint URL
 
    https://sms.liveall.eu/apiext/Sendout/SendJSMS
 
+------------------------------------------------
 
 curl example
 ------------
@@ -46,6 +51,8 @@ curl example
         ]
     }
   '
+
+------------------------------------------------
 
 JSON object example
 -------------------
@@ -92,6 +99,7 @@ JSON Object variables
    ``(optional) - unsigned integer`` by setting that parameter you can choose between normal and low cost price category (where applicable).
    Set 1 in case you want to send the message with low cost, or ignore it or set the value to 0, in case you want to send with normal cost
 
+------------------------------------------------
 
 Error Response
 --------------
@@ -118,6 +126,7 @@ In case of error, we get something like the below:
 
 For more details see the `APPENDIX`_
 
+------------------------------------------------
 
 Successful Response
 -------------------
@@ -146,6 +155,7 @@ Successful Response
 
 **[success]** is true and the **[data]** property contains the **[smsid]** for each SMS
 
+------------------------------------------------
 
 APPENDIX
 --------
@@ -172,6 +182,7 @@ Name                Description
 
 OperationErrors
 ^^^^^^^^^^^^^^^
+
 This is an array with objects having the properties ``errorCode``, ``errorMessage``, ``SMSErrorType``, ``valueOfError``.
 In case of success this object is null
 
@@ -262,6 +273,7 @@ In case of success this object is null
                 DESTINATION_NUM = 3,
                 OTHER           = 4,
             }
+
 
 
 .. _`your account’s page`: https://www.liveall.eu/user

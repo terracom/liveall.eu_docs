@@ -8,19 +8,22 @@ Send SMS with a form link
   :local:
   :backlinks: none
 
-Description
------------
+------------------------------------------------
+
+Description - How it works
+--------------------------
 
 That document describes the same API as the :doc:`sendjsms` but it covers the case when we send form links to the message recipients.
 The usage is simple enough and goes like this:
 
-1. provide an additional property [forms] as described here: :ref:`[forms] object`
+1. provide an additional property [forms] as described here: :hoverxref:`[forms] object`
 2. SMS body must have a token: ``{%form_link_token}``. That token will be replaced with the final URL that message recipient will tap on his phone
-3. object for each destination must also have a property ``value_tokens`` that is a key/value holder with the values of each parameter on the URL
+3. object for each destination must also have a property ``value_tokens`` that is a key/value holder with the values of each parameter on the URL, as described on :hoverxref:`[value_tokens] object` section
 4. the above key/value holder replaces the values of the corresponding param for each destination
 
-Find out more on :ref:`[forms] object` and :ref:`[value_tokens] object`
+.. note:: See also the :hoverxref:`Step-by-step demonstration`
 
+------------------------------------------------
 
 Endpoint URL
 ------------
@@ -31,6 +34,7 @@ The end-point to use for send-out is:
 
    https://sms.liveall.eu/apiext/Sendout/SendJSMS
 
+------------------------------------------------
 
 curl example
 ------------
@@ -67,6 +71,8 @@ curl example
       }
      }'
 
+------------------------------------------------
+
 JSON object example
 -------------------
 
@@ -102,7 +108,6 @@ The following JSON shows a possible payload for SMS send-out, that send a differ
     }
    }
 
-
 JSON Object variables
 ---------------------
 
@@ -129,8 +134,9 @@ JSON Object variables
    Set 1 in case you want to send the message with low cost, or ignore it or set the value to 0, in case you want to send with normal cost
 
 :guilabel:`forms`
-   ``object`` an object that has form data. Please read `[forms] object`_
+   ``object`` an object that has form data. Please read :ref:`[forms] object`
 
+------------------------------------------------
 
 [value_tokens] object
 ---------------------
@@ -156,6 +162,7 @@ for a **specific** destination, we would have the following JSON object:
 meaning that, [**value_tokens**] object will have as many entries as the parameters that must have different value for each destination.
 In the above example the URI query has 3 parameters, but we need to have different values only on 2 of them, since the 1 is static
 
+------------------------------------------------
 
 [forms] object
 --------------
@@ -186,6 +193,7 @@ This URL will be shortened by our **internal shortener system** - will shorten t
 As you can see in the :ref:`JSON object example`, there is a token: ``{SOMEID_VAL_TOKEN}`` which that will be replaced by the
 ``SOMEID_VAL_TOKEN`` value of the ``value_tokens`` key/value object and have a different value for each destination.
 
+------------------------------------------------
 
 Error Response
 --------------
@@ -212,6 +220,7 @@ In case of error, we get something like the below:
 
 For more details see the `APPENDIX`_
 
+------------------------------------------------
 
 Successful Response
 -------------------
@@ -240,6 +249,76 @@ Successful Response
 
 **[success]** is true and the **[data]** property contains the **[smsid]** for each SMS
 
+------------------------------------------------
+
+Step-by-step demonstration
+--------------------------
+
+.. tabs::
+
+    .. tab:: Step 1
+        :tabid: first-jsonPl
+
+        **Json payload**
+
+        .. code:: json
+
+            {
+                "apitoken": "7ace3e49cae13ae4f5ccb8a6a8a0d6a8fe120aa82ae46ad6ee4c9d8",
+                "senderid": "mySender",
+                "messages": [
+                    {
+                        "destination": "306912345676",
+                        "message": "Test message C. In order to consent, tap on the following link {%form_link_token}",
+                        "value_tokens": {
+                            "SOMEID_VAL_TOKEN": "ZTq9Jzj8LH"
+                        }
+                    }
+                ],
+                "forms": {
+                "actual_url": "https://forms.onlineformsservice.example/myforms/get/?mysoid={SOMEID_VAL_TOKEN}"
+                }
+            }
+
+    .. tab:: Step 2
+        :tabid: 2nd-shortenURL
+
+        **Long URL is shortened**
+
+        | ``https://forms.onlineformsservice.example/myforms/get/?mysoid={SOMEID_VAL_TOKEN}`` is splitted like this
+        |
+        | First part: ``https://forms.onlineformsservice.example/myforms/get/``
+        | Second part: ``?mysoid={SOMEID_VAL_TOKEN}``
+        |
+        | First part is shortened, for example to this: ``https://lval.eu/1``
+        | So the final URL turns into the: ``https://lval.eu/1?mysoid={SOMEID_VAL_TOKEN}``
+
+    .. tab:: Step 3
+        :tabid: 3rd-val-replace
+
+        **Values replacement**
+
+        Since ``value_tokens`` object has a key with a name ``SOMEID_VAL_TOKEN``, its value will replace the ``{SOMEID_VAL_TOKEN}`` part on the URI
+
+        .. code-block:: flatline
+
+            https://lval.eu/1?mysoid={SOMEID_VAL_TOKEN}
+            turns into the
+            https://lval.eu/1?mysoid=ZTq9Jzj8LH
+
+
+    .. tab:: Step 4
+        :tabid: 4th-final-form
+
+        **Final formation of the SMS text**
+
+        The final SMS text will become:
+        
+        .. code-block:: flatline
+
+            Test message C. In order to consent, tap on the following link https://lval.eu/1?mysoid=ZTq9Jzj8LH
+
+------------------------------------------------
 
 APPENDIX
 --------

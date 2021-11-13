@@ -8,6 +8,7 @@ Send SMS
   :local:
   :backlinks: none
 
+------------------------------------------------
 
 Endpoint URL
 ------------
@@ -17,6 +18,7 @@ The end-point for sending SMS via HTTP (**POST**) calls is the following:
 
   https://sms.liveall.eu/apiext/Sendout/SendSMS
 
+------------------------------------------------
 
 curl example
 ------------
@@ -59,6 +61,8 @@ Variables
 
 .. note:: If you want to test the API we recommend to use the Postman_.
 
+------------------------------------------------
+
 Error Response
 --------------
 
@@ -71,6 +75,8 @@ where:
 <Error code>    is the request’s error code as shown below
 <Error message> is the error message, describing the problem with the request
 =============== ==============
+
+------------------------------------------------
 
 Successful Response
 -------------------

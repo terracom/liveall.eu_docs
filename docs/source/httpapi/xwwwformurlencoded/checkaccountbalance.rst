@@ -5,6 +5,8 @@ Check the account balance
   :local:
   :backlinks: none
 
+------------------------------------------------
+
 Endpoint URL
 ------------
 
@@ -14,6 +16,8 @@ The end-point for sending SMS via HTTP (**POST**) calls is the following:
 
   https://sms.liveall.eu/apiext/Sendout/GetAccountBalance
 
+
+------------------------------------------------
 
 curl example
 ------------
@@ -35,6 +39,7 @@ apitoken
 *countryprefix (optional)*
    an optional country code. If you provide that, you will get the available SMS count, based on the price of the provided country (normal & low cost)
 
+------------------------------------------------
 
 Successful Responses
 --------------------
@@ -54,6 +59,8 @@ Balance           the account’s balance in euros
 SmsRemainCount    the remaining SMS (for the case we want to send with normal cost)
 LCSmsRemainCount  the remaining SMS (for the case we want to send with low cost)
 ================  =====================
+
+------------------------------------------------
 
 Error Response
 --------------

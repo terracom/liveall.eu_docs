@@ -8,11 +8,14 @@ Send Viber messages
   :local:
   :backlinks: none
 
+------------------------------------------------
+
 Description
 -----------
 
 Viber endpoint makes the IM sendout convenient offering bulk messages transmission with a SMS fallback capability
 
+------------------------------------------------
 
 Endpoint URL
 ------------
@@ -21,6 +24,7 @@ Endpoint URL
 
    https://sms.liveall.eu/apiext/Sendout/SendIM
 
+------------------------------------------------
 
 curl example
 ------------
@@ -45,7 +49,6 @@ curl example
     ]
   }
   '
-
 
 JSON Object variables
 ---------------------
@@ -87,6 +90,8 @@ JSON Object variables
    ``(optional) - string`` (same as above) the text of the fallback SMS
 
 
+------------------------------------------------
+
 JSON object example (No SMS fallback)
 -------------------------------------
 
@@ -105,6 +110,7 @@ JSON object example (No SMS fallback)
     ]
   }
 
+------------------------------------------------
 
 JSON object example (With SMS fallback)
 ---------------------------------------
@@ -127,6 +133,7 @@ JSON object example (With SMS fallback)
     ]
   }
 
+------------------------------------------------
 
 Error Response
 --------------
@@ -149,6 +156,7 @@ In case of error, we got something like the following:
       "data": null
   }
 
+------------------------------------------------
 
 Successful Response
 -------------------
@@ -165,6 +173,7 @@ Successful Response
       ]
   }
 
+------------------------------------------------
 
 Response properties
 -------------------

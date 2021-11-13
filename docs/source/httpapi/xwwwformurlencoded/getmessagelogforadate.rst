@@ -4,11 +4,15 @@ Extract message log for a date
 .. figure:: ../../static/messages-log.png
    :alt: messages-log-icon
 
+------------------------------------------------
+
 Description
 -----------
 
 This endpoint extract the messages log for a specific date in a string format (csv)
 
+
+------------------------------------------------
 
 Endpoint URL
 ------------
@@ -17,6 +21,8 @@ Endpoint URL
 
    https://sms.liveall.eu/apiext/Sendout/GetSMSHistory
 
+
+------------------------------------------------
 
 curl example
 ------------
@@ -63,6 +69,8 @@ Form parameters
    ``(optional filter) - integer`` Filter, gets rows with SMS id greater than the value specified. Suppose there are results with SMS id (1, 2, 3, 4, 5) and we define 2, then we will get the rows (3, 4, 5)
 
 
+------------------------------------------------
+
 Error Response
 --------------
 
@@ -86,6 +94,7 @@ Internal error
 
 In that case, service will return http status: 500 as descibed here: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_Server_errors
 
+------------------------------------------------
 
 Successful Response
 -------------------

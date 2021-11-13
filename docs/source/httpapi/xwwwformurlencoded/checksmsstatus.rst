@@ -5,6 +5,8 @@ Check the status of a submitted message
   :local:
   :backlinks: none
 
+------------------------------------------------
+
 Endpoint URL
 ------------
 
@@ -14,6 +16,7 @@ The end-point for sending SMS via HTTP (**POST**) calls is the following:
 
   https://sms.liveall.eu/apiext/Sendout/GetSMSStatus
 
+------------------------------------------------
 
 curl example
 ------------
@@ -35,6 +38,7 @@ apitoken
 smsids
    supply the SMS id(s) of the already submitted message(s). You may use one of the following delimiters, between SMS ids, in case you want to provide more than one message: ``,.^``
 
+------------------------------------------------
 
 Error Response
 --------------
@@ -49,6 +53,8 @@ where:
 <Error message>   is the error message, describing the problem with the request
 ===============   ==============
 
+------------------------------------------------
+
 Successful Response
 -------------------
 
@@ -60,6 +66,8 @@ For example:
 
 For the case you want the status for more than one messages, you will be returned with the results delimiter with character ``|``, for example:
    ``20817547:1465021934:1465021977:306912456789:200000:Delivered:1:0.0379|20818326:1467226402:0:306912345789:100007:Queued:1:0``
+
+------------------------------------------------
 
 Description of result fields
 ----------------------------
