@@ -1,3 +1,2 @@
 sphinx-tabs
 sphinx-hoverxref
-sphinx-material
