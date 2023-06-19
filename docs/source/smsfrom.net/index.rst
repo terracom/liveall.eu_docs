@@ -556,4 +556,4 @@ Error Codes
    <a href="https://msdn.microsoft.com/en-us/library/wkze6zky.aspx" target="_blank">How to: Add or Remove References By Using the Add Reference Dialog Box</a>
 
 
-.. _`Terracom.Liveall.ConnectorLib`: https://www.liveall.eu/download/Terracom.Liveall.ConnectorLib_1.0.8.zip
+.. _`Terracom.Liveall.ConnectorLib`: https://www.liveall.eu/download/Terracom.Liveall.ConnectorLib_1.0.9.zip
