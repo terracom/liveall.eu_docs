@@ -33,6 +33,8 @@ curl example
     --data-urlencode 'message=This is a test message from me!'
 
 
+.. _smssendoutform_variables_ref:
+
 Variables
 ---------
 
@@ -55,8 +57,12 @@ Variables
 :guilabel:`sendon`
   ``(optional) - unsigned integer`` an optional scheduling parameter. You can define a future datetime a message to be sent. This variable is a type of unsigned integer - unix timestamp. You can find more reference on https://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_unix-timestamp That is, in case you want to send the message on 2016-07-06 12:17:45 you must provide the value 1467796665
 
+:guilabel:`user_ref_id`
+  ``(optional) - string`` this property is used when you schedule a **Single SMS** to be sent in a later time and you need to have a reference to it. When scheduling a message by using the ``sendon`` property SMS is not stored on the final log table, but in an intermediate table. That's the reason the API is returning the schedule datetime and not the SMS id.
+  You can specify a custom unique SMS id that can be used when you need to get the SMS status as illustrated in the :ref:`Check the status of a submitted message <chksmsstatus_custom_smsid_ref>` page.
+
 :guilabel:`pricecat`
-  ``(optional) - unsigned integer`` by setting that parameter you can choose between normal and low cost price category (where applicable). Set 1 in case you want to send the message with low cost, or ignore it or set the value to 0, in case you want to send with normal cost
+  ``(deprecated) - unsigned integer`` by setting that parameter you can choose between normal and low cost price category (where applicable). Set 1 in case you want to send the message with low cost, or ignore it or set the value to 0, in case you want to send with normal cost
 
 
 .. note:: If you want to test the API we recommend to use the Postman_.
@@ -90,4 +96,5 @@ In case of success, for a single destination number, we get the below result, wh
 
 .. _`your account’s page`: https://www.liveall.eu/user
 .. _Postman: https://www.postman.com/downloads/
+.. _`Check the status of a submitted message`: httpapi/oldapi/index
 

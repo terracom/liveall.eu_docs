@@ -7,14 +7,25 @@ Check the status of a submitted message
 
 ------------------------------------------------
 
-Endpoint URL
-------------
+Main end-point URL
+------------------
 
 The end-point for sending SMS via HTTP (**POST**) calls is the following:
 
 .. code:: flatline
 
   https://sms.liveall.eu/apiext/Sendout/GetSMSStatus
+
+
+End-point to lookup with a custom SMS id
+----------------------------------------
+
+Alternativly, the end-point to lookup with a custom SMS id is the below:
+
+.. code:: flatline
+
+   https://sms.liveall.eu/apiext/Sendout/GetSMSStatus2
+
 
 ------------------------------------------------
 
@@ -29,14 +40,20 @@ curl example
     --data-urlencode 'smsids=20817547,20818326'
 
 
+.. _chksmsstatus_custom_smsid_ref:
+
 Variables
 ---------
 
-apitoken
+:guilabel:`apitoken`
    a unique hash code for each account that authorizes each web request. That code you can find it on `your account’s page`_
 
-smsids
+:guilabel:`smsids`
    supply the SMS id(s) of the already submitted message(s). You may use one of the following delimiters, between SMS ids, in case you want to provide more than one message: ``,.^``
+
+:guilabel:`user_def_smsids`
+   Either use ``smsids`` or ``user_def_smsids``. This property is used in special cases like when you schedule an SMS and you :ref:`define a custom sms id <smssendoutform_variables_ref>` with ``user_ref_id``.
+
 
 ------------------------------------------------
 

@@ -23,7 +23,7 @@ Also you are dealing with a JSON object (as a payload), which is much more strai
 Endpoint URL
 ------------
 
-.. code:: flatline
+.. code:: 
 
    https://sms.liveall.eu/apiext/Sendout/SendJSMS
 
@@ -32,7 +32,7 @@ Endpoint URL
 curl example
 ------------
 
-.. code:: flatline
+.. code:: 
 
   curl --location --request POST 'https://sms.liveall.eu/apiext/Sendout/SendJSMS' \
   --header 'Content-Type: application/json' \
@@ -154,6 +154,60 @@ Successful Response
     }
 
 **[success]** is true and the **[data]** property contains the **[smsid]** for each SMS
+
+------------------------------------------------
+
+Case of scheduled SMS
+---------------------
+
+In cases we send scheduled SMS the batch is not stored in the SMS log tables, but in the buffer tables.
+For this reason, the API does not return as above (providing the SMS id to be used by the :doc:`../xwwwformurlencoded/checksmsstatus`) but only returns the datetime of the schedule.
+To overcome this, you can use an extra property on each message, with the name [``user_ref_id``]. Your request may seem like the below example:
+
+.. code-block:: json
+
+  {
+      "apitoken": "7ace3e49cae13ae4f5ccb8a6a8a0d6a8fe120aa82ae46ad6ee4c9d8",
+      "senderid": "mySender",
+      "sendon": 1729251298,
+      "messages": [
+          {
+              "destination": "306912345678",
+              "message": "Test message A",
+              "user_ref_id": "744f6643-eaed-4ea8-a3b9-7361d80a4fb0"
+          },
+          {
+              "destination": "306912345677",
+              "message": "Test message B",
+              "user_ref_id": "7d8fb7ab-4f7a-455a-9282-73ad556933f4"
+          }
+      ]
+  }
+
+:guilabel:`user_ref_id`
+   ``string`` (max 50 character) This property must have a unique value, to be distinguished among the other messages. It is recommended to use a guid, but you can also use another type of unique id
+
+When sending scheduled SMS by providing the ``user_ref_id`` property with a value, then the API returns with something like the below example:
+
+.. code-block:: json
+
+    {
+        "success": true,
+        "OperationErrors": null,
+        "SubmissionID": 0,
+        "data": [
+            {
+                "destination": "306912345678",
+                "smsid": null,
+                "user_ref_id": "744f6643-eaed-4ea8-a3b9-7361d80a4fb0"
+            },
+            {
+                "destination": "306912345677",
+                "smsid": null,
+                "user_ref_id": "7d8fb7ab-4f7a-455a-9282-73ad556933f4"
+            }
+        ]
+    }
 
 ------------------------------------------------
 

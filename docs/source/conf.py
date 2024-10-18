@@ -3,11 +3,11 @@
 # -- Project information
 
 project = 'Liveall.eu Docs'
-copyright = '2021, Liveall.eu'
+copyright = '2024, Liveall.eu'
 author = 'Mike Nakos'
 
-release = '12'
-version = 'v12'
+release = '18'
+version = 'v18'
 
 # -- General configuration
 
