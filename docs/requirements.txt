@@ -1,2 +1,3 @@
 sphinx-tabs
 sphinx-hoverxref
+sphinx-rtd-theme
